@@ -1,0 +1,99 @@
+.info {
+  background-color: var(--color-primary-white);
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .info__content {
+      .info__title {
+        @media (min-width: 768px) {
+          text-align: left;
+        }
+      }
+      .info__description {
+        margin-top: 20px;
+      }
+      .info__statistic {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .info__stat-item {
+          .info__stat-canvas {
+            position: relative;
+            margin-top: 10px;
+            background-color: #f5f6f7;
+            padding: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .info__stat-num {
+              position: relative;
+              color: var(--color-primary-white);
+              z-index: 1;
+              font-size: 0.62rem;
+            }
+
+            .info__stat-bg {
+              background-color: #178cea;
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              width: 50%;
+            }
+          }
+
+          &:nth-child(2) {
+            .info__stat-bg {
+              width: 60%;
+            }
+          }
+          &:nth-child(3) {
+            .info__stat-bg {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+    .info__image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('./../images/info-solar.webp');
+      background-size: cover;
+      border-radius: 20px;
+      background-position: 85%;
+      flex-shrink: 0;
+      height: 300px;
+
+      @media (min-width: 768px) {
+        height: 500px;
+        width: 50%;
+      }
+      .info__image-text {
+        z-index: 1;
+        position: absolute;
+        padding: 20px;
+        color: var(--color-primary-white);
+
+        .info__image-number {
+          font-family: 'Roboto', serif;
+          font-weight: 300;
+          letter-spacing: 3px;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}

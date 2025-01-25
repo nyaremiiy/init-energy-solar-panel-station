@@ -1,0 +1,31 @@
+.green-energy {
+  background-color: #051c2f;
+  .green-energy__container {
+    flex-direction: column;
+    display: flex;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+    }
+    .green-energy__content {
+      .green-energy__title {
+        color: #fff;
+      }
+      .green-energy__description {
+        color: #cad9e8;
+        font-style: italic;
+        margin-top: 15px;
+      }
+    }
+    .green-energy__button {
+      text-align: center;
+      margin: 25px auto 0 auto;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+    }
+  }
+}
