@@ -1,0 +1,182 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./../images/hero-bg.webp');
+  background-size: cover;
+  background-position: 70%;
+  background-repeat: no-repeat;
+  /* height: calc(100vh - 76px); */
+  height: 100vh;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    background-position: center;
+  }
+
+  @media (min-width: 992px) {
+    /* height: calc(100vh - 108px); */
+    height: 100vh;
+  }
+  .hero__container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+
+    .hero__top-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .hero__slogan {
+        color: var(--color-primary-white);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 0.62rem;
+
+        svg {
+          width: 24px;
+        }
+      }
+      .hero__info {
+        display: flex;
+        font-weight: 500;
+        color: var(--color-primary-white);
+        gap: 5px;
+        text-transform: capitalize;
+
+        .hero__year {
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+
+        svg {
+          margin-top: 9px;
+        }
+
+        .hero__info-text {
+          @media (min-width: 768px) {
+            max-width: 195px;
+          }
+        }
+      }
+    }
+    .hero__middle-bar {
+      .hero__title {
+        color: var(--color-primary-white);
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-size: 1.8rem;
+
+        svg {
+          width: 12px;
+
+          @media (min-width: 480px) {
+            width: 16px;
+          }
+          @media (min-width: 560px) {
+            width: 20px;
+          }
+          @media (min-width: 768px) {
+            width: 18px;
+          }
+          @media (min-width: 1024px) {
+            width: 24px;
+          }
+          path {
+            fill: var(--color-primary-white);
+          }
+        }
+
+        @media (min-width: 480px) {
+          font-size: 2.4rem;
+        }
+        @media (min-width: 560px) {
+          font-size: 2.9rem;
+        }
+        @media (min-width: 768px) {
+          font-size: 3rem;
+          padding-left: 50px;
+          padding-right: 100px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 4rem;
+        }
+      }
+    }
+    .hero__bottom-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .hero__description {
+        color: var(--color-primary-white);
+        font-weight: 300;
+        font-size: 0.87rem;
+        line-height: 1.5;
+
+        @media (min-width: 480px) {
+          font-size: 1rem;
+        }
+        @media (min-width: 768px) {
+          font-size: 1.12rem;
+        }
+      }
+      .hero__button {
+        transition: all 0.2s ease-out;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        background-color: var(--color-pale-blue);
+        padding: 16px;
+        border-radius: 6px;
+        max-width: 400px;
+        font-size: 0.62rem;
+        min-height: 60px;
+        text-align: center;
+        color: var(--color-primary-black);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        font-weight: 600;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0px 5px 5px var(--color-light-gray);
+        }
+
+        @media (min-width: 768px) {
+          font-size: 0.87rem;
+          max-width: 420px;
+          font-weight: 400;
+        }
+
+        @media (min-width: 1024px) {
+          flex-shrink: 0;
+          height: 40px;
+        }
+
+        svg {
+          min-width: 24px;
+        }
+      }
+    }
+  }
+}

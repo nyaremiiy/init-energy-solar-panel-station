@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-white: #fff;
+  --color-primary-black: #000;
+  --color-pale-blue: #F5F5F8;
+  --color-blue: #071EED;
+  --color-light-gray: #9c9c9c;
+}
+
+body {
+  font-family: 'Montserrat', serif;
+}
+
+p {
+  font-family: 'Roboto', serif;
+}
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 10px;
+  @media (min-width: 480px) {
+    padding: 0 24px;
+  }
+}
