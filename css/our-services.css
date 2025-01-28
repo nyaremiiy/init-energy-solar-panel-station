@@ -1,0 +1,175 @@
+.our-services {
+  background-color: #051c2f;
+
+  .our-services__container {
+    .slogan {
+      justify-content: center;
+    }
+    .our-services__title {
+      text-align: center;
+    }
+    .our-services__description {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .our-services__cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      margin-top: 40px;
+      gap: 30px;
+      padding-bottom: 40px;
+
+      border-bottom: 1px solid #f5f6f7;
+
+      @media (min-width: 768px) {
+        padding-bottom: 60px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 15px;
+        margin-top: 70px;
+      }
+      @media (min-width: 1024px) {
+        gap: 25px;
+      }
+      .our-services__card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px;
+
+        .our-services__card-image-box {
+          .our-services__card-image {
+            border-radius: 12px;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+        .our-services__card-title {
+          text-transform: capitalize;
+          color: #fff;
+          font-weight: 500;
+          font-size: 1.1rem;
+
+          @media (min-width: 480px) {
+            font-size: 1.5rem;
+          }
+          @media (min-width: 768px) {
+            font-size: 1.1rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.4rem;
+          }
+        }
+        .our-services__card-desc {
+          color: #cad9e8;
+          font-size: 0.87rem;
+          font-weight: 300;
+
+          @media (min-width: 480px) {
+            font-size: 1rem;
+          }
+          @media (min-width: 768px) {
+            font-size: 0.87rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1rem;
+          }
+        }
+        .our-services__button {
+          @media (min-width: 768px) {
+            margin-top: auto;
+          }
+          .our-services__card-link-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #39ec2a;
+            font-size: 0.87rem;
+            width: fit-content;
+            padding: 8px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            border-radius: 6px;
+
+            &:hover {
+              background-color: #39ec2a;
+              color: #051c2f;
+            }
+
+            @media (min-width: 768px) {
+              margin-left: 0;
+            }
+            @media (min-width: 1024px) {
+              font-size: 1rem;
+            }
+
+            svg {
+              width: 32px;
+
+              @media (min-width: 1024px) {
+                width: 46px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .our-services__list {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 25px;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 35px;
+      }
+
+      .our-services__item {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #f5f6f7;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #178cea;
+          .our-services__item-text {
+            color: #f5f6f7;
+
+            .our-services__item-num {
+              color: #fff;
+            }
+          }
+        }
+
+        .our-services__item-text {
+          text-align: center;
+          font-size: 0.87rem;
+          color: #2f4252;
+
+          .our-services__item-num {
+            color: #051c2f;
+            display: block;
+            font-size: 1.3rem;
+
+            @media (min-width: 768px) {
+              font-size: 1.9rem;
+            }
+            @media (min-width: 1024px) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

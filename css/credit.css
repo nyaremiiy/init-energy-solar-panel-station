@@ -1,0 +1,84 @@
+.credit {
+  background-color: var(--color-primary-light-bg);
+  .credit__container {
+    .credit__content {
+      display: flex;
+      flex-direction: column;
+      margin-top: clamp(0.938rem, 0.71rem + 1.14vw, 1.563rem);
+      gap: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+      }
+      .credit__images-box {
+        flex: 1;
+        .credit__content-image-box {
+          img {
+            border-radius: 20px;
+          }
+
+          &:nth-child(2) {
+            display: none;
+            margin-top: 20px;
+
+            @media (min-width: 768px) {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .credit__content-text-box {
+        flex: 1;
+        .credit__title-h3 {
+          color: var(--color-dark-blue);
+          font-weight: 600;
+          font-size: 1.1rem;
+
+          @media (min-width: 1024px) {
+            font-size: 1.8rem;
+          }
+        }
+        .credit__list {
+          margin-top: clamp(0.938rem, 0.71rem + 1.14vw, 1.563rem);
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+
+          .credit__item {
+
+            .credit__item-header {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              .credit__item-icon {
+                width: 42px;
+              }
+              .credit__title-h4 {
+                color: var(--color-dark-blue);
+                font-weight: 500;
+              }
+            }
+            .credit__item-box {
+              margin-top: 10px;
+              background-color: var(--color-secondary-light-bg);
+              border-radius: 8px;
+              padding: 8px;
+              font-size: 0.87rem;
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              color: var(--color-gray-text);
+              line-height: 1.5;
+
+              @media (min-width: 1024px) {
+                padding: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

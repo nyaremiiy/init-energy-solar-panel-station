@@ -9,6 +9,12 @@
 }
 
 :root {
+  --color-primary-light-bg: #fff;
+  --color-dark-blue: #051c2f;
+  --color-secondary-light-bg: #f5f6f7;
+  --color-gray-text: #2F4252;
+  --color-primary-black-text: #000;
+
   --color-primary-white: #fff;
   --color-primary-black: #000;
   --color-pale-blue: #f5f5f8;
@@ -78,7 +84,7 @@ section {
   color: var(--color-blue);
 }
 .slogan--neon {
-  color: #1375C3;
+  color: #1375c3;
 }
 
 .title-secondary {
@@ -98,6 +104,13 @@ section {
     text-align: left;
   }
 }
+.title-secondary--light {
+  color: #fff;
+}
+
+.title-description {
+  margin-top: 15px;
+}
 
 .text {
   color: var(--color-text-primary);
@@ -108,6 +121,13 @@ section {
   @media (min-width: 1024px) {
     font-size: 1rem;
   }
+}
+.text--light {
+  color: #cad9e8;
+}
+.text--bold {
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .button-link {
@@ -127,8 +147,8 @@ section {
 }
 
 .button-link--green {
-  background-color: #39EC2A;
-  color: #051C2F;
+  background-color: #39ec2a;
+  color: #051c2f;
 
   &:hover {
     box-shadow: 2px 5px 5px #0e5807;
