@@ -12,9 +12,8 @@
   --color-primary-light-bg: #fff;
   --color-dark-blue: #051c2f;
   --color-secondary-light-bg: #f5f6f7;
-  --color-gray-text: #2F4252;
+  --color-gray-text: #2f4252;
   --color-primary-black-text: #000;
-
   --color-primary-white: #fff;
   --color-primary-black: #000;
   --color-pale-blue: #f5f5f8;
@@ -22,6 +21,18 @@
   --color-light-gray: #9c9c9c;
   --color-title-secondary: #051c2f;
   --color-text-primary: #2f4252;
+  --color-blue-light: #1375c3;
+  --color-blue--second: #178cea;
+  --primary-line-color: #cad9e8;
+  --color-text-light: #cad9e8;
+  --color-title-primary: #051c2f;
+  --color-dark-bg: #051c2f;
+
+  --color-primary: #39ec2a;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,6 +53,16 @@ ul {
   list-style-type: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 section {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -57,6 +78,10 @@ section {
   }
 }
 
+.no-scrolled {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1248px;
@@ -67,6 +92,141 @@ section {
   }
 }
 
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.62rem;
+
+  svg {
+    width: 22px;
+  }
+}
+.subtitle--light {
+  color: var(--color-primary-white);
+}
+.subtitle--blue {
+  color: var(--color-blue-light);
+}
+.subtitle--dark-blue {
+  color: var(--color-blue-light);
+}
+
+.title-h2 {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--color-title-secondary);
+  line-height: 1.5;
+
+  @media (min-width: 480px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+.title-h2--light {
+  color: var(--color-primary-white);
+}
+
+.title-h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--color-title-primary);
+
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+  }
+}
+.title-h3--light {
+  color: var(--color-primary-white);
+}
+
+.text {
+  color: var(--color-text-primary);
+  font-size: 0.87rem;
+  font-weight: 300;
+  line-height: 1.5;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+}
+.text--white {
+  color: var(--color-primary-white);
+}
+.text--light {
+  color: var(--color-text-light);
+}
+.text--silver {
+  color: var(--color-text-primary);
+}
+.text--bold {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.text--small {
+  font-size: 0.87rem;
+}
+.text--cursive {
+  font-style: italic;
+}
+
+.button-link {
+  padding: 16px 40px;
+  width: 100%;
+  border-radius: 6px;
+  max-height: fit-content;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  flex-shrink: 0;
+  font-size: 0.87rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.button-link--green {
+  background-color: #39ec2a;
+  color: #051c2f;
+
+  &:hover {
+    box-shadow: 2px 5px 5px #0e5807;
+  }
+}
+.button-link--light {
+  background-color: var(--color-pale-blue);
+  color: var(--color-primary-black);
+}
+.button-link--small {
+  padding: 16px 10px;
+}
+.button-link--secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+
+  &:hover {
+    box-shadow: 2px 5px 5px #0e5807;
+    background-color: #39ec2a;
+    color: #051c2f;
+  }
+}
+
+
+/* Delete */
 .slogan {
   color: var(--color-primary-white);
   display: flex;
@@ -86,7 +246,6 @@ section {
 .slogan--neon {
   color: #1375c3;
 }
-
 .title-secondary {
   text-align: center;
   margin-top: 10px;
@@ -106,51 +265,4 @@ section {
 }
 .title-secondary--light {
   color: #fff;
-}
-
-.title-description {
-  margin-top: 15px;
-}
-
-.text {
-  color: var(--color-text-primary);
-  font-size: 0.87rem;
-  font-weight: 300;
-  line-height: 1.4;
-
-  @media (min-width: 1024px) {
-    font-size: 1rem;
-  }
-}
-.text--light {
-  color: #cad9e8;
-}
-.text--bold {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.button-link {
-  padding: 16px 40px;
-  width: 100%;
-  border-radius: 6px;
-  max-height: fit-content;
-  display: block;
-  width: fit-content;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-  flex-shrink: 0;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-}
-
-.button-link--green {
-  background-color: #39ec2a;
-  color: #051c2f;
-
-  &:hover {
-    box-shadow: 2px 5px 5px #0e5807;
-  }
 }

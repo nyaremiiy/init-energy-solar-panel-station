@@ -1,5 +1,6 @@
 .globus-bank {
-  background-color: var(--color-secondary-light-bg);
+  /* background-color: var(--color-secondary-light-bg); */
+  padding-top: 0;
   .globus-bank__container {
     .globus-bank__content-wrapper {
       background-color: var(--color-primary-light-bg);
@@ -8,6 +9,7 @@
       padding: 10px;
       box-shadow: 0px 0px 10px #999;
       margin-top: 20px;
+      padding-bottom: 25px;
 
       @media (min-width: 768px) {
         padding: 20px;
@@ -46,6 +48,19 @@
             font-size: 1rem;
           }
         }
+      }
+    }
+    .globus-bank__description {
+      margin-top: 20px;
+    }
+    .globus-bank-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+
+      @media (min-width: 768px) {
+        margin-top: 25px;
+       justify-content: flex-end;
       }
     }
   }

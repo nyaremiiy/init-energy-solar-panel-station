@@ -1,6 +1,11 @@
 .credit {
   background-color: var(--color-primary-light-bg);
   .credit__container {
+
+    .energy__description {
+      margin-top: 15px;
+    }
+    
     .credit__content {
       display: flex;
       flex-direction: column;

@@ -1,8 +1,8 @@
 .info {
   background-color: var(--color-primary-white);
   .info__container {
-    display: flex;
     flex-direction: column;
+    display: flex;
     gap: 40px;
 
     @media (min-width: 768px) {
@@ -17,22 +17,28 @@
         }
       }
       .info__description {
-        margin-top: 20px;
+        margin-top: 10px;
       }
       .info__statistic {
-        margin-top: 15px;
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
 
         .info__stat-item {
+          .info__stat-year {
+            color: var(--color-primary-black-text);
+            font-weight: 400;
+            font-size: 1rem;
+          }
+
           .info__stat-canvas {
+            background-color: var(--color-secondary-light-bg);
             position: relative;
-            margin-top: 10px;
-            background-color: #f5f6f7;
-            padding: 8px;
             border-radius: 4px;
+            margin-top: 10px;
             overflow: hidden;
+            padding: 8px;
 
             .info__stat-num {
               position: relative;
@@ -42,7 +48,7 @@
             }
 
             .info__stat-bg {
-              background-color: #178cea;
+              background-color: var(--color-blue--second);
               position: absolute;
               left: 0;
               top: 0;

@@ -6,11 +6,12 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 
   @media (min-width: 768px) {
     background-position: center;
+    padding-top: 120px;
   }
 
   @media (min-width: 992px) {
@@ -25,32 +26,20 @@
     .hero__top-bar {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 20px;
 
       @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
       }
-
-      .hero__slogan {
-        color: var(--color-primary-white);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 300;
-        text-transform: uppercase;
-        font-size: 0.62rem;
-
-        svg {
-          width: 24px;
-        }
-      }
       .hero__info {
-        display: flex;
-        font-weight: 500;
-        color: var(--color-primary-white);
-        gap: 5px;
         text-transform: capitalize;
+        color: var(--color-primary-white);
+        font-size: 0.87rem;
+        font-weight: 500;
+        display: flex;
+        gap: 5px;
 
         .hero__year {
           font-weight: 700;
@@ -71,9 +60,10 @@
     .hero__middle-bar {
       .hero__title {
         color: var(--color-primary-white);
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: 4px;
         font-size: 1.6rem;
+        text-align: center;
 
         svg {
           width: 12px;
@@ -98,13 +88,8 @@
         @media (min-width: 480px) {
           font-size: 2.4rem;
         }
-        @media (min-width: 560px) {
-          font-size: 2.9rem;
-        }
         @media (min-width: 768px) {
           font-size: 2.7rem;
-          padding-left: 50px;
-          padding-right: 100px;
         }
         @media (min-width: 1024px) {
           font-size: 3.7rem;
@@ -123,57 +108,9 @@
         gap: 30px;
       }
 
-      .hero__description {
-        color: var(--color-primary-white);
-        font-weight: 300;
-        font-size: 0.87rem;
-        line-height: 1.5;
-
-        @media (min-width: 480px) {
-          font-size: 1rem;
-        }
-        @media (min-width: 768px) {
-          font-size: 1.12rem;
-        }
-      }
       .hero__button {
-        transition: all 0.2s ease-out;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        justify-content: center;
-        background-color: var(--color-pale-blue);
-        padding: 16px;
-        border-radius: 6px;
-        max-width: 400px;
-        font-size: 0.62rem;
-        min-height: 60px;
-        text-align: center;
-        color: var(--color-primary-black);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        cursor: pointer;
-        font-weight: 600;
-
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0px 5px 5px var(--color-light-gray);
-        }
-
-        @media (min-width: 768px) {
-          font-size: 0.87rem;
-          max-width: 420px;
-          font-weight: 400;
-        }
-
-        @media (min-width: 1024px) {
-          flex-shrink: 0;
-          height: 40px;
-        }
-
-        svg {
-          min-width: 24px;
-        }
+        margin: 0 auto;
+        flex-shrink: 0;
       }
     }
   }

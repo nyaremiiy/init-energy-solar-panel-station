@@ -5,29 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INIT Energy - Solar Panel Station</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <header class="header"></header>
+    <!-- Header -->
+    <header class="header" id="js-header">
+      <div class="header__container container">
+        <div class="header__logo">
+          <a href="https://init.energy/" class="logo INIT ENERGY">
+            <img src="./images/main-logo-white.webp" alt="Logo INIT Energy" />
+          </a>
+        </div>
+        <nav class="header__nav" id="js-header-nav">
+          <div class="header__menu">
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="https://init.energy/cec" class="menu__link">Головна</a>
+              </li>
+              <li class="menu__item">
+                <a href="#about-us" class="menu__link">Про нас</a>
+              </li>
+              <li class="menu__item">
+                <a href="#our-services" class="menu__link">Наші сервіси</a>
+              </li>
+              <li class="menu__item">
+                <a href="#credit" class="menu__link">Кредитування</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__button">
+            <a href="#" class="button-link button-link--green">
+              <span>Підключитись</span>
+              <svg
+                width="27"
+                height="8"
+                viewBox="0 0 27 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z"
+                  fill="#051C2F"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <div class="header__burger">
+          <div class="burger" id="js-burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
     <main>
+      <!-- Section Hero -->
       <section class="hero">
         <div class="hero__container container">
           <div class="hero__top-bar">
-            <div class="slogan">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                />
-              </svg>
-              <span>твоя енергетична незалежність</span>
+            <div class="hero__subtitle">
+              <div class="subtitle subtitle--light">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                  />
+                </svg>
+                <span>твоя енергетична незалежність</span>
+              </div>
             </div>
             <div class="hero__info">
               <div class="hero__year">2025</div>
@@ -57,34 +113,41 @@
             </h1>
           </div>
           <div class="hero__bottom-bar">
-            <p class="hero__description">
+            <p class="hero__description text text--white">
               Сонце дарує безмежну енергію, і ми допомагаємо вам стати
               незалежними від електромережі. Обирайте сонячні станції для дому
               чи бізнесу, заощаджуйте кошти та створюйте екологічно чисту
               енергію вже сьогодні.
             </p>
-            <a href="#" class="hero__button"
-              >Підключити енергію майбутнього
-              <svg
-                width="27"
-                height="8"
-                viewBox="0 0 27 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z"
-                  fill="#051C2F"
-                />
-              </svg>
-            </a>
+            <div class="hero__button">
+              <a
+                href="#"
+                class="button-link button-link--light button-link--small"
+                >Підключити енергію майбутнього
+                <svg
+                  width="27"
+                  height="8"
+                  viewBox="0 0 27 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z"
+                    fill="#051C2F"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
+      <!-- End section Hero -->
+
+      <!-- Section Info -->
       <section class="info">
         <div class="info__container container">
           <div class="info__content">
-            <div class="slogan slogan--dark">
+            <div class="subtitle subtitle--blue">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -99,12 +162,10 @@
                   d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
                 />
               </svg>
-              <span>твоя енергетична незалежність</span>
+              <span>Розвиток Енергетики</span>
             </div>
-            <h2 class="info__title title-secondary">
-              Зростання сонячної енергетики
-            </h2>
-            <p class="info__description text">
+            <h2 class="info__title title-h2">Зростання сонячної енергетики</h2>
+            <p class="info__description text text--silver">
               З кожним роком популярність сонячних панелей зростає, і все більше
               домогосподарств та підприємств обирають відновлювані джерела
               енергії. У цій секції ми наводимо ключову статистику, яка
@@ -134,7 +195,7 @@
                 </div>
               </li>
             </ul>
-            <p class="info__description text">
+            <p class="info__description text text--small text--cursive">
               Джерело: Міжнародне енергетичне агентство
             </p>
           </div>
@@ -146,9 +207,12 @@
           </div>
         </div>
       </section>
-      <section class="choose-us">
+      <!-- End section Info -->
+
+      <!-- Section Choose Us -->
+      <section class="choose-us" id="about-us">
         <div class="choose-us__container container">
-          <div class="slogan slogan--dark">
+          <div class="subtitle subtitle--dark-blue">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -165,31 +229,29 @@
             </svg>
             <span>init energy - ваш найкращий вибір</span>
           </div>
-
-          <div class="choose-us__generate">
-            <h2 class="choose-us__title title-secondary">
+          <div class="choose-us__header">
+            <h2 class="choose-us__title title-h2">
               Генеруйте власну енергiю разом з нами
             </h2>
-            <a href="#" class="choose-us__button"
-              >Дізнатись більше
-
+            <a href="#" class="button-link button-link--green">
+              <span> Дізнатись більше </span>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
+                width="27"
+                height="8"
+                viewBox="0 0 27 8"
                 fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3"
-                />
+                  d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z"
+                  fill="#051C2F"
+                ></path>
               </svg>
             </a>
           </div>
-          <p class="choose-us__description text">
+          <p
+            class="choose-us__description text text--silver text--cursive text--small"
+          >
             для продажу, економiï та незалежного споживання
           </p>
           <ul class="choose-us__cards">
@@ -197,8 +259,8 @@
               <div class="choose-us__icon">
                 <img src="./images/item.svg" alt="Icon" />
               </div>
-              <h3 class="choose-us__title-third">Для дому</h3>
-              <p class="text">
+              <h3 class="choose-us__title-third title-h3">Для дому</h3>
+              <p class="text text--silver">
                 Генеруйте електроенергію, незалежну від загальної мережі
                 електропостачання, для повної автономії від державних тарифів.
                 <br />
@@ -211,8 +273,8 @@
               <div class="choose-us__icon">
                 <img src="./images/item.svg" alt="Icon" />
               </div>
-              <h3 class="choose-us__title-third">Для доходу</h3>
-              <p class="text">
+              <h3 class="choose-us__title-third title-h3">Для доходу</h3>
+              <p class="text text--silver">
                 Отримуйте до €6900 річного прибутку від продажу сонячної енергії
                 по програмі Зеленого тарифу.
                 <br />
@@ -225,8 +287,8 @@
               <div class="choose-us__icon">
                 <img src="./images/item.svg" alt="Icon" />
               </div>
-              <h3 class="choose-us__title-third">Для пiдприємств</h3>
-              <p class="text">
+              <h3 class="choose-us__title-third title-h3">Для пiдприємств</h3>
+              <p class="text text--silver">
                 Зменшіть комунальні витрати на виробництві чи в офісі –
                 встановіть сонячну електростанцію для генерації електроенергії
                 <br />
@@ -248,10 +310,13 @@
           </div>
         </div>
       </section>
+      <!-- End section Choose Us -->
+
+      <!-- Section About Us -->
       <section class="about-us">
         <div class="about-us__container container">
           <div class="about-us__content">
-            <div class="slogan slogan--dark">
+            <div class="subtitle subtitle--blue">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -268,10 +333,10 @@
               </svg>
               <span>про нас</span>
             </div>
-            <h2 class="about-us__title title-secondary">
+            <h2 class="about-us__title title-h2">
               INIT Energy - енергія, якій можна довіряти
             </h2>
-            <p class="about-us__description text">
+            <p class="about-us__description text text--silver">
               Ми – команда професіоналів із багаторічним досвідом у сфері
               сонячної енергетики. За нашими плечима сотні успішно реалізованих
               проєктів по всій Україні. Ми гарантуємо якісне обладнання,
@@ -280,7 +345,7 @@
               надійного партнера, який піклується про ваш комфорт, незалежність
               від мережі та довгострокову економію.
             </p>
-            <h3 class="about-us__title-th">наша місія:</h3>
+            <h3 class="about-us__title-th title-h3">наша місія:</h3>
             <ul class="our-mission-list">
               <li class="our-mission-list__item">
                 Економія та вигода. Ми допомагаємо вам зменшити витрати на
@@ -313,10 +378,13 @@
           </div>
         </div>
       </section>
+      <!-- End section About Us -->
+
+      <!-- Section Green Energy -->
       <section class="green-energy">
         <div class="green-energy__container container">
           <div class="green-energy__content">
-            <div class="slogan slogan--neon">
+            <div class="subtitle subtitle--blue">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -333,10 +401,10 @@
               </svg>
               <span>твоя зелена енергія</span>
             </div>
-            <h2 class="green-energy__title title-secondary">
+            <h2 class="green-energy__title title-h2 title-h2--light">
               Отримуйте стабiльний дохiд вiд зеленоï енергiï
             </h2>
-            <p class="green-energy__description text">
+            <p class="green-energy__description text text--light text--cursive text--small">
               продавайте сонячну електроенергiю по зеленому тарифу
             </p>
           </div>
@@ -360,9 +428,12 @@
           </a>
         </div>
       </section>
-      <section class="our-services">
+      <!-- End section Green Energy -->
+
+      <!-- Section Our Services -->
+      <section class="our-services" id="our-services">
         <div class="our-services__container container">
-          <div class="slogan slogan--neon">
+          <div class="subtitle subtitle--blue">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -380,7 +451,7 @@
             <span>Наші сервіси</span>
           </div>
           <h2
-            class="our-services__title title-secondary title-secondary--light"
+            class="our-services__title title-h2 title-h2--light"
           >
             Комплексні рішення з відновлюваної енергетики
           </h2>
@@ -400,17 +471,17 @@
                   class="our-services__card-image"
                 />
               </div>
-              <h3 class="our-services__card-title">
+              <h3 class="our-services__card-title title-h3 title-h3--light">
                 Встановлення сонячних панелей
               </h3>
-              <p class="our-services__card-desc">
+              <p class="our-services__card-desc text--light">
                 Оптимальне рішення для економії та енергонезалежності. Ми
                 професійно встановлюємо сонячні панелі для вашого дому чи
                 бізнесу, забезпечуючи стабільну генерацію чистої енергії та
                 зниження витрат на електроенергію.
               </p>
               <div class="our-services__button">
-                <a href="#" class="our-services__card-link-btn">
+                <a href="#" class="our-services__card-link-btn button-link button-link--secondary button-link--small ">
                   <span>Дізнатись більше</span>
                   <svg
                     viewBox="0 0 46 46"
@@ -444,16 +515,16 @@
                   class="our-services__card-image"
                 />
               </div>
-              <h3 class="our-services__card-title">
+              <h3 class="our-services__card-title title-h3 title-h3--light">
                 Створення індивідуального проєкту
               </h3>
-              <p class="our-services__card-desc">
+              <p class="our-services__card-desc text--light">
                 Створюємо індивідуальні проєкти сонячних станцій, адаптовані до
                 ваших потреб. Ретельний аналіз, сучасні рішення та максимальна
                 ефективність для вашого дому чи бізнесу.
               </p>
               <div class="our-services__button">
-                <a href="#" class="our-services__card-link-btn">
+                <a href="#" class="our-services__card-link-btn button-link button-link--secondary button-link--small ">
                   <span>Дізнатись більше</span>
                   <svg
                     viewBox="0 0 46 46"
@@ -487,16 +558,16 @@
                   class="our-services__card-image"
                 />
               </div>
-              <h3 class="our-services__card-title">
+              <h3 class="our-services__card-title title-h3 title-h3--light">
                 Моніторинг та обслуговування
               </h3>
-              <p class="our-services__card-desc">
+              <p class="our-services__card-desc text--light">
                 Постійний контроль за ефективністю вашої сонячної станції.
                 Забезпечуємо професійне обслуговування, швидке усунення
                 несправностей та максимальну продуктивність системи.
               </p>
               <div class="our-services__button">
-                <a href="#" class="our-services__card-link-btn">
+                <a href="#" class="our-services__card-link-btn button-link button-link--secondary button-link--small ">
                   <span>Дізнатись більше</span>
                   <svg
                     viewBox="0 0 46 46"
@@ -551,9 +622,12 @@
           </div>
         </div>
       </section>
-      <section class="credit">
+      <!-- End section Our Services  -->
+
+      <!-- Section Credit -->
+      <section class="credit" id="credit">
         <div class="credit__container container">
-          <div class="slogan slogan--neon">
+          <div class="subtitle subtitle--dark-blue">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -568,12 +642,12 @@
                 d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
               />
             </svg>
-            <span>Енергія в кредит</span>
+            <span>Глобус Банк - Енергія в кредит</span>
           </div>
-          <h2 class="credit__title title-secondary">
+          <h2 class="credit__title title-h2">
             кредитування сонячної електростанції
           </h2>
-          <p class="energy__description text title-description">
+          <p class="energy__description text">
             Розпочніть шлях до енергонезалежності вже сьогодні з гнучкими
             умовами фінансування. Ми допомагаємо оформити кредит на сонячні
             електростанції зі зручними відсотковими ставками та тривалими
@@ -667,28 +741,11 @@
           </div>
         </div>
       </section>
+      <!-- End section Credit -->
+
+      <!-- Section Globus -->
       <section class="globus-bank">
         <div class="globus-bank__container container">
-          <div class="slogan slogan--dark">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-              />
-            </svg>
-            <span>Глобус Банк - сонячні кредити</span>
-          </div>
-          <h2 class="globus-bank__title title-secondary">
-            Ваш крок до енергонезалежності разом з Глобус Банк
-          </h2>
           <div class="globus-bank__content-wrapper">
             <div class="globus-bank__header-image">
               <img src="./images/globusbank-logo.webp" alt="Globus Bank logo" />
@@ -716,8 +773,31 @@
               </li>
             </ul>
           </div>
+          <p class="globus-bank__description text">
+            Для більш детальної інформації, заповніть форму та отримайте
+            консультацію від нашого менеджера.
+          </p>
+          <div class="globus-bank-button">
+            <a href="#" class="button-link button-link--green">
+              <span>Отримати консультацію</span>
+              <svg
+                width="27"
+                height="8"
+                viewBox="0 0 27 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z"
+                  fill="#051C2F"
+                ></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
+      <!-- End section Globus -->
     </main>
+    <footer class="footer"></footer>
   </body>
 </html>

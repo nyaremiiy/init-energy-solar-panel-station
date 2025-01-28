@@ -2,7 +2,7 @@
   background-color: #051c2f;
 
   .our-services__container {
-    .slogan {
+    .subtitle {
       justify-content: center;
     }
     .our-services__title {
@@ -13,57 +13,47 @@
       margin-top: 20px;
     }
     .our-services__cards {
-      display: grid;
+      border-bottom: 1px solid var(--primary-line-color);
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      margin-top: 40px;
-      gap: 30px;
       padding-bottom: 40px;
-
-      border-bottom: 1px solid #f5f6f7;
+      margin-top: 40px;
+      display: grid;
+      gap: 30px;
 
       @media (min-width: 768px) {
-        padding-bottom: 60px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
-        gap: 15px;
+        padding-bottom: 60px;
         margin-top: 70px;
+        gap: 15px;
       }
       @media (min-width: 1024px) {
         gap: 25px;
       }
+
       .our-services__card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
         justify-content: flex-start;
+        flex-direction: column;
+        display: flex;
+        height: 100%;
         gap: 15px;
 
         .our-services__card-image-box {
           .our-services__card-image {
             border-radius: 12px;
-            height: 250px;
             object-fit: cover;
+            height: 250px;
           }
         }
         .our-services__card-title {
           text-transform: capitalize;
-          color: #fff;
-          font-weight: 500;
           font-size: 1.1rem;
-
-          @media (min-width: 480px) {
-            font-size: 1.5rem;
-          }
-          @media (min-width: 768px) {
-            font-size: 1.1rem;
-          }
           @media (min-width: 1024px) {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
           }
         }
         .our-services__card-desc {
-          color: #cad9e8;
           font-size: 0.87rem;
           font-weight: 300;
 
@@ -82,10 +72,10 @@
             margin-top: auto;
           }
           .our-services__card-link-btn {
+            color: var(--color-primary);
             display: flex;
             align-items: center;
             gap: 10px;
-            color: #39ec2a;
             font-size: 0.87rem;
             width: fit-content;
             padding: 8px;
@@ -132,7 +122,7 @@
       .our-services__item {
         width: 100%;
         aspect-ratio: 1 / 1;
-        background-color: #f5f6f7;
+        background-color: var(--color-secondary-light-bg);
         border-radius: 12px;
         display: flex;
         justify-content: center;
@@ -143,10 +133,10 @@
         &:hover {
           background-color: #178cea;
           .our-services__item-text {
-            color: #f5f6f7;
+            color: var(--color-secondary-light-bg);
 
             .our-services__item-num {
-              color: #fff;
+              color: var(--color-primary-white);
             }
           }
         }
