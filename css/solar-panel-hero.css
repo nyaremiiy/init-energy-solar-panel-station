@@ -33,6 +33,11 @@
         flex-direction: row;
         justify-content: space-between;
       }
+      .hero__subtitle {
+        /* GSAP 0 */
+        opacity: 0;
+        transform:translateY(-50px);
+      }
       .hero__info {
         text-transform: capitalize;
         color: var(--color-primary-white);
@@ -40,6 +45,10 @@
         font-weight: 500;
         display: flex;
         gap: 5px;
+
+        /* GSAP 0 */
+        transform: translateY(-50px);
+        opacity: 0;
 
         .hero__year {
           font-weight: 700;
@@ -64,6 +73,10 @@
         letter-spacing: 4px;
         font-size: 1.6rem;
         text-align: center;
+
+        /* GSAP 0 */
+        transform: translateY(-50px);
+        opacity: 0;
 
         svg {
           width: 12px;
@@ -108,9 +121,19 @@
         gap: 30px;
       }
 
+      .hero__description {
+        /* GSAP 0 */
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+
       .hero__button {
         margin: 0 auto;
         flex-shrink: 0;
+
+        /* GSAP 0 */
+        transform: translateY(-50px);
+        opacity: 0;
       }
     }
   }

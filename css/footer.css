@@ -1,0 +1,97 @@
+.footer {
+  padding: 60px 0;
+  background-color: #101113;
+  background-image: url('./../images/innovation-bg.webp');
+  background-size: cover;
+  .footer__container {
+    .footer__top-bar {
+      .footer__title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        color: #fff;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--primary-line-color);
+
+        @media (min-width: 480px) {
+          font-size: 2.37rem;
+        }
+        @media (min-width: 560px) {
+          font-size: 2.87rem;
+        }
+        @media (min-width: 768px) {
+          font-size: 4rem;
+        }
+        @media (min-width: 1024px) {
+          font-size: 4.25rem;
+        }
+      }
+      .footer__description {
+        margin-top: 20px;
+        @media (min-width: 768px) {
+          margin-top: 40px;
+        }
+      }
+    }
+    .footer__middle-bar {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 30px;
+
+      @media (min-width: 768px) {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 5fr;
+      }
+
+      .footer__logo {
+        max-width: 130px;
+        margin: 0 auto;
+      }
+      .footer__nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+
+        @media (min-width: 560px) {
+          gap: clamp(1.563rem, -0.962rem + 7.21vw, 2.5rem);
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr;
+          align-items: flex-start;
+          text-align: left;
+          margin: 0 auto;
+        }
+        .footer__list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .footer__item {
+            .footer__list-title {
+              color: #fff;
+              font-weight: 500;
+              font-size: 1rem;
+            }
+            .footer__link {
+              color: rgb(255, 255, 255, 0.7);
+              transition: color 0.3s ease-in;
+              font-size: 0.87rem;
+
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer__bottom-bar {
+      text-align: center;
+      font-size: 0.87rem;
+      padding-top: 40px;
+      color: #fff;
+    }
+  }
+}
