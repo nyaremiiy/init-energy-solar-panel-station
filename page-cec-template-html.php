@@ -1,18 +1,24 @@
+<?php
+/*
+Template Name: CEC Template
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INIT Energy - Solar Panel Station</title>
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEC | INIT Energy</title>
+    <!-- Підключаємо кастомні стилі -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/custom-assets/styles-cec/index.css">
+</head>
+<body>
     <!-- Header -->
     <header class="header" id="js-header">
       <div class="header__container container">
         <div class="header__logo">
           <a href="https://init.energy/" class="logo INIT ENERGY">
-            <img src="./images/main-logo-white.webp" alt="Logo INIT Energy" />
+            <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/main-logo-white.webp" alt="Logo INIT Energy" />
           </a>
         </div>
         <nav class="header__nav" id="js-header-nav">
@@ -258,7 +264,7 @@
           <ul class="choose-us__cards">
             <li class="choose-us__item">
               <div class="choose-us__icon">
-                <img src="./images/item.svg" alt="Icon" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg" alt="Icon" />
               </div>
               <h3 class="choose-us__title-third title-h3">Для дому</h3>
               <p class="text text--silver">
@@ -272,7 +278,7 @@
             </li>
             <li class="choose-us__item">
               <div class="choose-us__icon">
-                <img src="./images/item.svg" alt="Icon" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg" alt="Icon" />
               </div>
               <h3 class="choose-us__title-third title-h3">Для доходу</h3>
               <p class="text text--silver">
@@ -286,7 +292,7 @@
             </li>
             <li class="choose-us__item">
               <div class="choose-us__icon">
-                <img src="./images/item.svg" alt="Icon" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg" alt="Icon" />
               </div>
               <h3 class="choose-us__title-third title-h3">Для пiдприємств</h3>
               <p class="text text--silver">
@@ -367,14 +373,14 @@
           </div>
           <div class="about-us__images">
             <div class="about-us__image animate-left">
-              <img src="./images/about-us-solar-1.webp" alt="#" />
+              <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/about-us-solar-1.webp" alt="#" />
             </div>
             <div class="about-us__image animate-left">
               <div class="about-us__rating">
                 <span class="about-us__rating-number">4.8/5</span> <br />
                 Рейтинг від клієнтів
               </div>
-              <img src="./images/about-us-solar-2.webp" alt="#" />
+              <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/about-us-solar-2.webp" alt="#" />
             </div>
           </div>
         </div>
@@ -468,7 +474,7 @@
           <ul class="our-services__cards">
             <li class="our-services__card">
               <div class="our-services__card-image">
-                <img src="./images/our-s-card-1.webp" alt="Solar panel" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/our-s-card-1.webp" alt="Solar panel" />
               </div>
               <div class="our-services__card-content">
                 <h3 class="our-services__card-title">
@@ -513,7 +519,7 @@
             </li>
             <li class="our-services__card">
               <div class="our-services__card-image">
-                <img src="./images/our-s-card-2.webp" alt="Solar panel" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/our-s-card-2.webp" alt="Solar panel" />
               </div>
               <div class="our-services__card-content">
                 <h3 class="our-services__card-title">
@@ -557,7 +563,7 @@
             </li>
             <li class="our-services__card">
               <div class="our-services__card-image">
-                <img src="./images/our-s-card-3.webp" alt="Solar panel" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/our-s-card-3.webp" alt="Solar panel" />
               </div>
               <div class="our-services__card-content">
                 <h3 class="our-services__card-title">
@@ -664,10 +670,10 @@
           <div class="credit__content animate-right">
             <div class="credit__images-box animate-right">
               <div class="credit__content-image-box">
-                <img src="./images/credit-2.webp" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/credit-2.webp" alt="" />
               </div>
               <div class="credit__content-image-box">
-                <img src="./images/credit.webp" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/credit.webp" alt="" />
               </div>
             </div>
             <div class="credit__content-text-box animate-right">
@@ -679,7 +685,7 @@
                   <div class="credit__item-header">
                     <img
                       class="credit__item-icon"
-                      src="./images/item.svg"
+                      src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg"
                       alt="icon"
                     />
                     <h4 class="credit__title-h4">Консультація з нами</h4>
@@ -698,7 +704,7 @@
                   <div class="credit__item-header">
                     <img
                       class="credit__item-icon"
-                      src="./images/item.svg"
+                      src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg"
                       alt="icon"
                     />
                     <h4 class="credit__title-h4">Звернення до банку</h4>
@@ -716,7 +722,7 @@
                   <div class="credit__item-header">
                     <img
                       class="credit__item-icon"
-                      src="./images/item.svg"
+                      src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg"
                       alt="icon"
                     />
                     <h4 class="credit__title-h4">Схвалення та оплата</h4>
@@ -732,7 +738,7 @@
                   <div class="credit__item-header">
                     <img
                       class="credit__item-icon"
-                      src="./images/item.svg"
+                      src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/item.svg"
                       alt="icon"
                     />
                     <h4 class="credit__title-h4">Доставка та монтаж</h4>
@@ -756,7 +762,7 @@
         <div class="globus-bank__container container">
           <div class="globus-bank__content-wrapper animate">
             <div class="globus-bank__header-image">
-              <img src="./images/globusbank-logo.webp" alt="Globus Bank logo" />
+              <img src="<?php echo get_template_directory_uri(); ?>/custom-assets/images/globusbank-logo.webp" alt="Globus Bank logo" />
             </div>
             <p class="globus-bank__description text">
               За підтримки Уряду та Фонду Розвитку Підприємництва, від сьогодні
@@ -898,7 +904,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="./js/animation.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/custom-assets/js-cec/index.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/custom-assets/js-cec/animation.js"></script>>
   </body>
 </html>

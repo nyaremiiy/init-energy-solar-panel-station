@@ -80,6 +80,7 @@ section {
 
 .animate, .animate-left, .animate-right {
   will-change: transform, opacity;
+  overflow: hidden;
 }
 
 
