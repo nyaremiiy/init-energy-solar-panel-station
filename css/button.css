@@ -1,0 +1,84 @@
+.button {
+  transition: background-color 0.3s ease;
+  padding: 16px 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.button--primary {
+  background-color: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: var(--color-button-primary-hover-bg);
+  }
+
+  &:active {
+    background-color: var(--color-button-primary-active-bg);
+  }
+
+  svg {
+    path {
+      fill: var(--color-button-primary-text);
+    }
+  }
+}
+.button--primary-light {
+  background-color: var(--color-button-primary-light-bg);
+  color: var(--color-button-primary-light-text);
+
+  &:hover {
+    background-color: var(--color-button-primary-light-hover-bg);
+  }
+
+  &:active {
+    background-color: var(--color-button-primary-light-active-bg);
+  }
+
+  svg {
+    path {
+      fill: var(--color-button-primary-light-text);
+    }
+  }
+}
+
+.button--secondary {
+  background-color: var(--color-button-secondary-bg);
+  color: var(--color-button-secondary-text);
+
+  &:hover {
+    background-color: var(--color-button-secondary-hover-bg);
+    color: var(--color-button-secondary-hover-text);
+  }
+}
+
+.button--additional {
+  background-color: var(--color-button-additional-bg);
+  color: var(--color-button-additional-text);
+  border: 1px solid var(--color-button-additional-text);
+  width: fit-content;
+  border-radius: 2px;
+  padding: 8px 24px;
+
+  @media (min-width: 480px) {
+    padding: 12px 48px;
+  }
+  @media (min-width: 480px) {
+    padding: 16px 100px;
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  }
+}

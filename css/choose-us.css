@@ -12,12 +12,16 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        gap: 150px;
       }
 
       .choose-us__title {
         @media (min-width: 768px) {
           text-align: left;
         }
+      }
+      .choose-us__header-button {
+        flex-shrink: 0;
       }
     }
     .choose-us__description {

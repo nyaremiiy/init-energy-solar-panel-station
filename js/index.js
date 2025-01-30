@@ -9,7 +9,6 @@ burger.addEventListener('click', () => {
 
 if (window.innerWidth < 768) {
   headerNav.querySelectorAll('a').forEach((link) => {
-    console.log(link);
     link.addEventListener('click', () => {
       console.log('click');
       burger.classList.toggle('burger--active');
@@ -21,8 +20,6 @@ if (window.innerWidth < 768) {
 
 window.addEventListener('scroll', function () {
   const header = document.getElementById('js-header');
-
-  // Додаємо або видаляємо клас "scrolled"
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {
@@ -31,22 +28,75 @@ window.addEventListener('scroll', function () {
 });
 
 headerNav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault(); // Скасовуємо стандартну прокрутку
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
 
-    const headerHeight = document.querySelector(".header").offsetHeight; // Висота хедера
-    const targetId = this.getAttribute("href"); // ID цільової секції
-    const targetSection = document.querySelector(targetId); // Цільова секція
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
-      // Обчислюємо положення секції з урахуванням висоти хедера
       const sectionPosition = targetSection.offsetTop - headerHeight;
 
-      // Прокручуємо сторінку до секції
       window.scrollTo({
         top: sectionPosition,
-        behavior: "smooth", // Плавна прокрутка
+        behavior: 'smooth',
       });
     }
   });
+});
+
+const buttons = document.querySelectorAll('.js-btn');
+const modalOverlay = document.querySelector('.modal-overlay');
+const closeModalButton = document.querySelector('.close-modal');
+
+function openModal() {
+  modalOverlay.classList.add('active');
+  document.body.classList.add('no-scrolled');
+}
+function closeModal() {
+  modalOverlay.classList.remove('active');
+  document.body.classList.remove('no-scrolled');
+}
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    openModal();
+  });
+});
+
+closeModalButton.addEventListener('click', () => {
+  closeModal();
+});
+
+modalOverlay.addEventListener('click', (event) => {
+  if (event.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+  event.preventDefault(); 
+
+  const formData = new FormData(this);
+
+  fetch('/wp-admin/admin-ajax.php?action=send_contact_form', {
+    method: 'POST',
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        document.getElementById('response-message').innerHTML =
+          '<p style="color: green; margin-top: 15px;">Повідомлення успішно надіслано!</p>';
+      } else {
+        document.getElementById('response-message').innerHTML =
+          `<p style="color: red; margin-top: 15px;">Помилка: ${data.data}</p>`;
+      }
+    })
+    .catch((error) => {
+      document.getElementById('response-message').innerHTML =
+        `<p style="color: red; margin-top: 15px;">Помилка: ${error.message}</p>`;
+    });
 });

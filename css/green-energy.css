@@ -13,12 +13,18 @@
       gap: 50px;
     }
     .green-energy__content {
+      .green-energy__title {
+        @media (min-width: 768px) {
+          text-align: left;
+        }
+      }
       .green-energy__description {
         margin-top: 15px;
       }
     }
     .green-energy__button {
       text-align: center;
+      flex-shrink: 0;
       margin: 25px auto 0 auto;
 
       @media (min-width: 768px) {

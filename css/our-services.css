@@ -59,9 +59,9 @@
           }
         }
         .our-services__card-button {
+          margin: 0 auto;
           margin-top: auto;
           a {
-            margin: 0 auto;
             svg {
               width: 32px;
             }
@@ -69,102 +69,6 @@
         }
       }
     }
-    /* .our-services__cards {
-      border-bottom: 1px solid var(--primary-line-color);
-      padding-bottom: 40px;
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-
-      @media (min-width: 768px) {
-        justify-content: space-between;
-        flex-direction: row;
-        padding-bottom: 60px;
-        margin-top: 70px;
-        gap: 15px;
-      }
-      @media (min-width: 1024px) {
-        gap: 25px;
-      }
-
-      .our-services__card {
-        justify-content: flex-start;
-        flex-direction: column;
-        display: flex;
-        height: 100%;
-        gap: 15px;
-        @media (min-width: 768px) {
-          max-width: 380px;
-        }
-
-        .our-services__card-image-box {
-          .our-services__card-image {
-            border-radius: 12px;
-            object-fit: cover;
-            height: 250px;
-          }
-        }
-        .our-services__card-title {
-          text-transform: capitalize;
-          font-size: 1.1rem;
-          @media (min-width: 1024px) {
-            font-size: 1.5rem;
-          }
-        }
-        .our-services__card-desc {
-          font-size: 0.87rem;
-          font-weight: 300;
-
-          @media (min-width: 480px) {
-            font-size: 1rem;
-          }
-          @media (min-width: 768px) {
-            font-size: 0.87rem;
-          }
-          @media (min-width: 1024px) {
-            font-size: 1rem;
-          }
-        }
-        .our-services__button {
-          @media (min-width: 768px) {
-            margin-top: auto;
-          }
-          .our-services__card-link-btn {
-            color: var(--color-primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.87rem;
-            width: fit-content;
-            padding: 8px;
-            text-align: center;
-            transition: all 0.3s ease-in-out;
-            border-radius: 6px;
-
-            &:hover {
-              background-color: #39ec2a;
-              color: #051c2f;
-            }
-
-            @media (min-width: 768px) {
-              margin-left: 0;
-            }
-            @media (min-width: 1024px) {
-              font-size: 1rem;
-            }
-
-            svg {
-              width: 32px;
-
-              @media (min-width: 1024px) {
-                width: 46px;
-              }
-            }
-          }
-        }
-      }
-    }*/
     .our-services__list {
       margin-top: 60px;
       display: grid;

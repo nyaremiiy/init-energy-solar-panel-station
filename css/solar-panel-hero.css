@@ -36,7 +36,7 @@
       .hero__subtitle {
         /* GSAP 0 */
         opacity: 0;
-        transform:translateY(-50px);
+        transform: translateY(-50px);
       }
       .hero__info {
         text-transform: capitalize;
@@ -66,49 +66,7 @@
         }
       }
     }
-    .hero__middle-bar {
-      .hero__title {
-        color: var(--color-primary-white);
-        font-weight: 500;
-        letter-spacing: 4px;
-        font-size: 1.6rem;
-        text-align: center;
 
-        /* GSAP 0 */
-        transform: translateY(-50px);
-        opacity: 0;
-
-        svg {
-          width: 12px;
-
-          @media (min-width: 480px) {
-            width: 16px;
-          }
-          @media (min-width: 560px) {
-            width: 20px;
-          }
-          @media (min-width: 768px) {
-            width: 18px;
-          }
-          @media (min-width: 1024px) {
-            width: 24px;
-          }
-          path {
-            fill: var(--color-primary-white);
-          }
-        }
-
-        @media (min-width: 480px) {
-          font-size: 2.4rem;
-        }
-        @media (min-width: 768px) {
-          font-size: 2.7rem;
-        }
-        @media (min-width: 1024px) {
-          font-size: 3.7rem;
-        }
-      }
-    }
     .hero__bottom-bar {
       display: flex;
       flex-direction: column;
