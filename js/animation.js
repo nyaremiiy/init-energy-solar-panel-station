@@ -6,19 +6,19 @@ const heroAnimation = {
   y: 0,
 };
 
-gsap.to('.header', { ...heroAnimation, duration: 0.3 });
-gsap.to(
-  ['.hero__subtitle', '.hero__info', '.hero__title', '.hero__description'],
-  { ...heroAnimation }
-);
-
-if (window.innerWidth < 768) {
-  gsap.to('.hero__button', { ...heroAnimation, delay: 1 });
-} else {
-  gsap.to('.hero__button', { ...heroAnimation, delay: 0.8 });
-}
-
 if (window.innerWidth > 560) {
+  gsap.to('.header', { ...heroAnimation, duration: 0.3 });
+  gsap.to(
+    [
+      '.hero__subtitle',
+      '.hero__info',
+      '.hero__title',
+      '.hero__description',
+      '.hero__button',
+    ],
+    { ...heroAnimation }
+  );
+
   // Глобальна анімація для всіх елементів з класом .animate
   gsap.utils.toArray('.animate').forEach((item) => {
     gsap.from(item, {
@@ -77,12 +77,7 @@ if (window.innerWidth > 560) {
   });
 
   gsap.utils
-    .toArray([
-      '.choose-us__cards',
-      '.choose-us__item',
-      '.our-services__cards',
-      '.credit__list',
-    ])
+    .toArray(['.choose-us__cards', '.credit__list'])
     .forEach((container) => {
       gsap.from(container.children, {
         opacity: 0,
@@ -94,7 +89,7 @@ if (window.innerWidth > 560) {
         scrollTrigger: {
           trigger: container,
           start: 'top 75%',
-          end: 'top 30%',
+          end: 'top 50%',
           toggleActions: 'play none none reverse',
         },
       });

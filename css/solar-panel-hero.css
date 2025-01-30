@@ -34,9 +34,11 @@
         justify-content: space-between;
       }
       .hero__subtitle {
-        /* GSAP 0 */
-        opacity: 0;
-        transform: translateY(-50px);
+        @media (min-width: 768px) {
+          /* GSAP 0 */
+          opacity: 0;
+          transform: translateY(-50px);
+        }
       }
       .hero__info {
         text-transform: capitalize;
@@ -46,9 +48,11 @@
         display: flex;
         gap: 5px;
 
-        /* GSAP 0 */
-        transform: translateY(-50px);
-        opacity: 0;
+        @media (min-width: 768px) {
+          /* GSAP 0 */
+          transform: translateY(-50px);
+          opacity: 0;
+        }
 
         .hero__year {
           font-weight: 700;
@@ -80,18 +84,22 @@
       }
 
       .hero__description {
-        /* GSAP 0 */
-        transform: translateY(-50px);
-        opacity: 0;
+        @media (min-width: 768px) {
+          /* GSAP 0 */
+          transform: translateY(-50px);
+          opacity: 0;
+        }
       }
 
       .hero__button {
         margin: 0 auto;
         flex-shrink: 0;
 
-        /* GSAP 0 */
-        transform: translateY(-50px);
-        opacity: 0;
+        @media (min-width: 768px) {
+          /* GSAP 0 */
+          transform: translateY(-50px);
+          opacity: 0;
+        }
       }
     }
   }
