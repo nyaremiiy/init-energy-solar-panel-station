@@ -28,8 +28,8 @@ if (window.innerWidth > 560) {
       ease: 'power2.out',
       scrollTrigger: {
         trigger: item,
-        start: 'top 75%',
-        end: 'top 30%',
+        start: 'top 80%',
+        end: 'top 50%',
         toggleActions: 'play none none reverse',
       },
     });
@@ -44,7 +44,7 @@ if (window.innerWidth > 560) {
       scrollTrigger: {
         trigger: item,
         start: 'top 80%',
-        end: 'top 55%',
+        end: 'top 50%',
         toggleActions: 'play none none reverse',
       },
     });
@@ -59,7 +59,7 @@ if (window.innerWidth > 560) {
       scrollTrigger: {
         trigger: item,
         start: 'top 80%',
-        end: 'top 55%',
+        end: 'top 50%',
         toggleActions: 'play none none reverse',
       },
     });
@@ -88,7 +88,7 @@ if (window.innerWidth > 560) {
         stagger: 0.5, // Плавне з’явлення карток одна за одною
         scrollTrigger: {
           trigger: container,
-          start: 'top 75%',
+          start: 'top 85%',
           end: 'top 50%',
           toggleActions: 'play none none reverse',
         },
