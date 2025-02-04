@@ -46,65 +46,65 @@ headerNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
-const buttons = document.querySelectorAll('.js-btn');
-const modalOverlay = document.querySelector('.modal-overlay');
-const closeModalButton = document.querySelector('.close-modal');
+// const buttons = document.querySelectorAll('.js-btn');
+// const modalOverlay = document.querySelector('.modal-overlay');
+// const closeModalButton = document.querySelector('.close-modal');
 
-function openModal() {
-  modalOverlay.classList.add('active');
+// function openModal() {
+//   modalOverlay.classList.add('active');
 
-  if (!document.body.classList.contains('no-scrolled')) {
-    document.body.classList.add('no-scrolled');
-  }
-}
-function closeModal() {
-  modalOverlay.classList.remove('active');
-  if (!burger.classList.contains('burger--active')) {
-    document.body.classList.remove('no-scrolled');
-  }
-}
+//   if (!document.body.classList.contains('no-scrolled')) {
+//     document.body.classList.add('no-scrolled');
+//   }
+// }
+// function closeModal() {
+//   modalOverlay.classList.remove('active');
+//   if (!burger.classList.contains('burger--active')) {
+//     document.body.classList.remove('no-scrolled');
+//   }
+// }
 
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    openModal();
-  });
-});
+// buttons.forEach((button) => {
+//   button.addEventListener('click', () => {
+//     openModal();
+//   });
+// });
 
-closeModalButton.addEventListener('click', () => {
-  closeModal();
-});
+// closeModalButton.addEventListener('click', () => {
+//   closeModal();
+// });
 
-modalOverlay.addEventListener('click', (event) => {
-  if (event.target === modalOverlay) {
-    closeModal();
-  }
-});
+// modalOverlay.addEventListener('click', (event) => {
+//   if (event.target === modalOverlay) {
+//     closeModal();
+//   }
+// });
 
-document
-  .getElementById('contact-form')
-  .addEventListener('submit', function (event) {
-    event.preventDefault();
+// document
+//   .getElementById('contact-form')
+//   .addEventListener('submit', function (event) {
+//     event.preventDefault();
 
-    const formData = new FormData(this);
+//     const formData = new FormData(this);
 
-    fetch('/wp-admin/admin-ajax.php?action=send_contact_form', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          document.getElementById('response-message').innerHTML =
-            '<p style="color: green; margin-top: 15px;">Повідомлення успішно надіслано!</p>';
-        } else {
-          document.getElementById(
-            'response-message'
-          ).innerHTML = `<p style="color: red; margin-top: 15px;">Помилка: ${data.data}</p>`;
-        }
-      })
-      .catch((error) => {
-        document.getElementById(
-          'response-message'
-        ).innerHTML = `<p style="color: red; margin-top: 15px;">Помилка: ${error.message}</p>`;
-      });
-  });
+//     fetch('/wp-admin/admin-ajax.php?action=send_contact_form', {
+//       method: 'POST',
+//       body: formData,
+//     })
+//       .then((response) => response.json())
+//       .then((data) => {
+//         if (data.success) {
+//           document.getElementById('response-message').innerHTML =
+//             '<p style="color: green; margin-top: 15px;">Повідомлення успішно надіслано!</p>';
+//         } else {
+//           document.getElementById(
+//             'response-message'
+//           ).innerHTML = `<p style="color: red; margin-top: 15px;">Помилка: ${data.data}</p>`;
+//         }
+//       })
+//       .catch((error) => {
+//         document.getElementById(
+//           'response-message'
+//         ).innerHTML = `<p style="color: red; margin-top: 15px;">Помилка: ${error.message}</p>`;
+//       });
+//   });
