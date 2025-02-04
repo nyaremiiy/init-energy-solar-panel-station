@@ -10,7 +10,6 @@ burger.addEventListener('click', () => {
 if (window.innerWidth < 768) {
   headerNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      console.log('click');
       burger.classList.remove('burger--active');
       headerNav.classList.remove('header-nav--active');
       document.body.classList.remove('no-scrolled');
@@ -27,7 +26,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-headerNav.querySelectorAll('a').forEach((link) => {
+headerNav.querySelectorAll('.nav').forEach((link) => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 
